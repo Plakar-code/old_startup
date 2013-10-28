@@ -1,0 +1,39 @@
+$(document).ready( function () {
+
+    $('textarea').autosize();
+
+      $(window).resize(function(){
+
+        //put inside what to reload javascript on resize screen
+
+      }).trigger('resize');
+
+
+});      
+
+
+
+
+
+
+//PLACEHOLDER
+    $('[placeholder]').focus(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+        input.val('');
+        input.removeClass('placeholder');
+      }
+    }).blur(function() {
+      var input = $(this);
+      if (input.val() == '' || input.val() == input.attr('placeholder')) {
+        input.addClass('placeholder');
+        input.val(input.attr('placeholder'));
+      }
+    }).blur().parents('form').submit(function() {
+      $(this).find('[placeholder]').each(function() {
+        var input = $(this);
+        if (input.val() == input.attr('placeholder')) {
+          input.val('');
+        }
+      })
+    });

@@ -1,0 +1,27 @@
+/* --------------------------------------------------------------------------------------
++
++ BUTTONS
++
+-------------------------------------------------------------------------------------- */
+
+.btn {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 10px;
+    color: $btn-clr;
+    background: $btn-bgr;
+    border: none;
+    @include radius;
+    @include transition(all .3s ease);
+    font-family: $base-font;
+    &:hover {
+        background: $btn-hover;
+    }
+
+    // &.small {  }
+
+    // &.medium {  }
+
+    // &.large {  }
+}

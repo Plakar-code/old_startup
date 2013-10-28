@@ -1,0 +1,21 @@
+/* --------------------------------------------------------------------------------------
++
++ FORMS
++
+-------------------------------------------------------------------------------------- */
+
+/* MAIN PART */
+
+input[type="text"], textarea {
+	vertical-align: middle;
+	border: none;
+	color: $input-clr;
+	background-color: $input-bgr;
+	padding: 0 10px;
+	@include transition(all .4s ease);
+	@include radius;
+    font-family: $base-font;
+	&:hover, &:focus {
+		background-color: #fff;
+	}
+}
